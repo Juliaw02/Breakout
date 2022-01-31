@@ -7,7 +7,7 @@ public class GameMaster : MonoBehaviour
 {
     public float playerPoints;
     public float maxLevelPoints;
-    public float playerLives = 3;
+    public float playerLives;
 
     // Start is called before the first frame update
     void Start()

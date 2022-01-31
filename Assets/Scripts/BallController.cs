@@ -39,7 +39,7 @@ public class BallController : MonoBehaviour
             // the ball's velocity will go to 0
             ballRigidbody.velocity = Vector3.zero;
             // tracking lost lives
-            gameMaster.playerLives = gameMaster.playerLives--;
+            gameMaster.playerLives = gameMaster.playerLives - 1;
             // the ball's position will reset back to the starting position
             transform.position = startPosition;
             ballLaunched = false;
