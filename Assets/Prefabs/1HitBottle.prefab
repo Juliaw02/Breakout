@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2937771470859093478}
   - component: {fileID: 2937771470859093479}
-  - component: {fileID: 2937771470859093472}
   - component: {fileID: 2937771470859093473}
+  - component: {fileID: -3109383102949936358}
   m_Layer: 0
   m_Name: 1HitBottle
   m_TagString: Untagged
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 7a3698efa340a094298417a6f955a1ac, type: 3}
-  m_Color: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 1}
+  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -85,8 +85,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &2937771470859093472
-BoxCollider2D:
+--- !u!114 &2937771470859093473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2937771470859093474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9f1aa8065fbc584bbfa6f110f452760, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfHits: 0
+  maxHits: 1
+  noHit: {fileID: 21300000, guid: 7a3698efa340a094298417a6f955a1ac, type: 3}
+  oneHit: {fileID: 0}
+  brickSprite: {fileID: 0}
+  brickValue: 1
+  gameMaster: {fileID: 0}
+--- !u!60 &-3109383102949936358
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -108,23 +127,23 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.5, y: 0.35}
-  m_EdgeRadius: 0
---- !u!114 &2937771470859093473
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2937771470859093474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9f1aa8065fbc584bbfa6f110f452760, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  numberOfHits: 0
-  maxHits: 1
-  brickSprite: {fileID: 0}
-  brickValue: 1
-  gameMaster: {fileID: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 0.6924238, y: 0.17447233}
+      - {x: 0.18634558, y: 0.17358398}
+      - {x: 0.12619162, y: 0.13597488}
+      - {x: 0.0018720627, y: 0.17307234}
+      - {x: -0.49644566, y: 0.1754508}
+      - {x: -0.6571336, y: 0.07452059}
+      - {x: -0.6706853, y: 0.093304634}
+      - {x: -0.7496797, y: 0.092513055}
+      - {x: -0.7489524, y: -0.09378195}
+      - {x: -0.67636776, y: -0.09424758}
+      - {x: -0.6584749, y: -0.07226205}
+      - {x: -0.4903611, y: -0.17687969}
+      - {x: -0.0053372383, y: -0.17124295}
+      - {x: 0.124325275, y: -0.13029909}
+      - {x: 0.17506409, y: -0.17329049}
+      - {x: 0.70201206, y: -0.1746788}
+      - {x: 0.75045514, y: -0.11990075}
+      - {x: 0.75, y: 0.12318918}

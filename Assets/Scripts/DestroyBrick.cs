@@ -7,6 +7,8 @@ public class DestroyBrick : MonoBehaviour
     public int numberOfHits = 0;
     public int maxHits;
 
+    public Sprite noHit;
+    public Sprite oneHit;
     public SpriteRenderer brickSprite;
     public float brickValue;
 
@@ -30,6 +32,8 @@ public class DestroyBrick : MonoBehaviour
     {
         // Number of hits goes up every time the ball collides with the bricks
         numberOfHits++;
+
+        transform.GetComponent<SpriteRenderer>().sprite = oneHit;
 
         if (numberOfHits >= maxHits)
         {
