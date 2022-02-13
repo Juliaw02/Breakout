@@ -10,7 +10,9 @@ public class DestroyBrick : MonoBehaviour
     public Sprite noHit;
     public Sprite oneHit;
     public SpriteRenderer brickSprite;
-    public float brickValue;
+    public int brickValue;
+
+    public Transform powerup;
 
     public GameMaster gameMaster;
 
@@ -35,9 +37,21 @@ public class DestroyBrick : MonoBehaviour
 
         transform.GetComponent<SpriteRenderer>().sprite = oneHit;
 
+        if (this.transform.CompareTag ("Bricks"))
+        {
+            int randomChance = Random.Range(1, 101);
+
+            if (randomChance < 30)
+            {
+                Instantiate(powerup, this.transform.position, other.transform.rotation);
+            }
+        }
+        
+
         if (numberOfHits >= maxHits)
         {
-            gameMaster.playerPoints = gameMaster.playerPoints + brickValue;
+            gameMaster.UpdateScore(+brickValue);
+
             Destroy(this.gameObject);
         }
     }

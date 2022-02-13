@@ -23,23 +23,32 @@ public class BallController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // If the spacebar has been pressed
         if (Input.GetKeyDown(KeyCode.Space) && !ballLaunched)
         {
             randomNumber = Random.Range(0, startDirections.Length);
             ballRigidbody.AddForce(startDirections[randomNumber] * ballForce, ForceMode2D.Impulse);
             ballLaunched = true;
         }
+
+        // If R is pressed reset the ball position
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            ballRigidbody.velocity = Vector3.zero;
+            transform.position = startPosition;
+            ballLaunched = false;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         // If the ball runs into an object with this tag
-        if (other.gameObject.tag == "DefeatZone")
+        if (other.CompareTag ("DefeatZone"))
         {
             // the ball's velocity will go to 0
             ballRigidbody.velocity = Vector3.zero;
             // tracking lost lives
-            gameMaster.playerLives = gameMaster.playerLives - 1;
+            gameMaster.UpdateLives(-1);
             // the ball's position will reset back to the starting position
             transform.position = startPosition;
             ballLaunched = false;
