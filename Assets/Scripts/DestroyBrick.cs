@@ -13,7 +13,17 @@ public class DestroyBrick : MonoBehaviour
     public Transform powerup;
     public GameMaster gameMaster;
 
-    //public Vector3[] maskLocations;
+    //public Vector3[] maskLocations4 =
+    //{
+        //new Vector3 {x = -7.5, y = 1.75, z = 0},
+        //new Vector3 {x = -4.5, y = 0.75, z = 0},
+        //new Vector3 {x = -1.5, y = -0.25, z = 0},
+        //new Vector3 {x = 1.5, y = -0.25, z = 0},
+        //new Vector3 {x = 7.5, y = -0.25, z = 0},
+        //new Vector3 {x = -4.5, y = -0.25, z = 0},
+        //new Vector3 {x = -7.5, y = 0.25, z = 0},
+        //new Vector3 {x = -7.5, y = 3.75, z = 0}
+    //};
 
     // Start is called before the first frame update
     void Start()
@@ -21,28 +31,18 @@ public class DestroyBrick : MonoBehaviour
         brickSprite = GetComponent<SpriteRenderer>();
         gameMaster.GetComponent<GameMaster>();
 
-       // maskLocations = new Vector3[8];
-       // maskLocations[0] = new Vector3(-7.5f, 1.75f, 0f);
-       // maskLocations[1] = new Vector3(-4.5f, 0.75f, 0f);
-       // maskLocations[2] = new Vector3(-1.5f, -0.25f, 0f);
-       // maskLocations[3] = new Vector3(1.5f, -0.25f, 0f);
-       // maskLocations[4] = new Vector3(7.5f, -0.25f, 0f);
-       // maskLocations[5] = new Vector3(-4.5f, -0.25f, 0f);
-       // maskLocations[6] = new Vector3(-7.5f, 0.75f, 0f);
-       // maskLocations[7] = new Vector3(-7.5f, 3.75f, 0f);
-        
     }
 
     // Update is called once per frame
     void Update()
     {
         // if the object is a mask and has been hit once
-       //if (gameObject.tag == "Mask" && numberOfHits >= 1 && numberOfHits < maxHits)
-       // {
+        //if (gameObject.tag == "Mask" && numberOfHits == 1)
+        //{
             // teleport?
-           // int i = Random.Range(0, maskLocations.Length);
-           // transform.position = maskLocations[i].position;
-      //  }
+            //int w = Random.Range(0, maskLocations4.Length);
+            //transform.position = maskLocations4[w].position;
+        //}
     }
 
     // Collision rather than Trigger so the ball actually collides
@@ -63,7 +63,7 @@ public class DestroyBrick : MonoBehaviour
                 Instantiate(powerup, this.transform.position, other.transform.rotation);
             }
         }
-        
+
         // If brick is hit max # of times, update score and destroy brick
         if (numberOfHits >= maxHits)
         {
@@ -83,7 +83,7 @@ public class DestroyBrick : MonoBehaviour
                 gameMaster.UpdateScore(+brickValue);
             }
         }
-            for (int q = 0; q < fish2Box.Length; q++)
+        for (int q = 0; q < fish2Box.Length; q++)
         {
             if (gameObject.tag == "Fish2")
             {
@@ -99,6 +99,6 @@ public class DestroyBrick : MonoBehaviour
                 gameMaster.UpdateScore(+brickValue);
             }
         }
-        
+
     }
 }

@@ -1249,7 +1249,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1611865886232571539, guid: f05e1208312266442a9bfa425489fd40, type: 3}
       propertyPath: m_TagString
-      value: Mask
+      value: Bricks
       objectReference: {fileID: 0}
     - target: {fileID: 4763352165243017320, guid: f05e1208312266442a9bfa425489fd40, type: 3}
       propertyPath: powerup
@@ -2341,7 +2341,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1611865886232571539, guid: f05e1208312266442a9bfa425489fd40, type: 3}
       propertyPath: m_TagString
-      value: Mask
+      value: Bricks
       objectReference: {fileID: 0}
     - target: {fileID: 4763352165243017320, guid: f05e1208312266442a9bfa425489fd40, type: 3}
       propertyPath: powerup
@@ -2897,7 +2897,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1611865886232571539, guid: f05e1208312266442a9bfa425489fd40, type: 3}
       propertyPath: m_TagString
-      value: Mask
+      value: Bricks
       objectReference: {fileID: 0}
     - target: {fileID: 4763352165243017320, guid: f05e1208312266442a9bfa425489fd40, type: 3}
       propertyPath: powerup
@@ -4105,7 +4105,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1611865886232571539, guid: f05e1208312266442a9bfa425489fd40, type: 3}
       propertyPath: m_TagString
-      value: Mask
+      value: Bricks
       objectReference: {fileID: 0}
     - target: {fileID: 4763352165243017320, guid: f05e1208312266442a9bfa425489fd40, type: 3}
       propertyPath: powerup
@@ -4334,7 +4334,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1611865886232571539, guid: f05e1208312266442a9bfa425489fd40, type: 3}
       propertyPath: m_TagString
-      value: Mask
+      value: Bricks
       objectReference: {fileID: 0}
     - target: {fileID: 4763352165243017320, guid: f05e1208312266442a9bfa425489fd40, type: 3}
       propertyPath: powerup
