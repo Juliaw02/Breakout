@@ -37,7 +37,7 @@ public class DestroyBrick : MonoBehaviour
     void Update()
     {
         // if the object is a mask and has been hit once
-       // if (this.CompareTag("Mask") && numberOfHits >= 1 && numberOfHits < maxHits)
+       //if (gameObject.tag == "Mask" && numberOfHits >= 1 && numberOfHits < maxHits)
        // {
             // teleport?
            // int i = Random.Range(0, maskLocations.Length);
@@ -58,7 +58,7 @@ public class DestroyBrick : MonoBehaviour
         {
             int randomChance = Random.Range(1, 101);
 
-            if (randomChance < 30)
+            if (randomChance < 40)
             {
                 Instantiate(powerup, this.transform.position, other.transform.rotation);
             }
@@ -70,5 +70,35 @@ public class DestroyBrick : MonoBehaviour
             gameMaster.UpdateScore(+brickValue);
             Destroy(this.gameObject);
         }
+
+        // Exploding fish bricks
+        GameObject[] fish3Box = GameObject.FindGameObjectsWithTag("Fish3Box");
+        GameObject[] fish2Box = GameObject.FindGameObjectsWithTag("Fish2Box");
+        GameObject[] fish1Box = GameObject.FindGameObjectsWithTag("Fish1Box");
+        for (int i = 0; i < fish3Box.Length; i++)
+        {
+            if (gameObject.tag == "Fish3")
+            {
+                Destroy(fish3Box[i]);
+                gameMaster.UpdateScore(+brickValue);
+            }
+        }
+            for (int q = 0; q < fish2Box.Length; q++)
+        {
+            if (gameObject.tag == "Fish2")
+            {
+                Destroy(fish2Box[q]);
+                gameMaster.UpdateScore(+brickValue);
+            }
+        }
+        for (int p = 0; p < fish1Box.Length; p++)
+        {
+            if (gameObject.tag == "Fish1")
+            {
+                Destroy(fish1Box[p]);
+                gameMaster.UpdateScore(+brickValue);
+            }
+        }
+        
     }
 }

@@ -8,6 +8,12 @@ TagManager:
   - ExtraLife
   - Bricks
   - Mask
+  - Fish2
+  - Fish3
+  - Fish1
+  - Fish1Box
+  - Fish2Box
+  - Fish3Box
   layers:
   - Default
   - TransparentFX
