@@ -97,12 +97,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9f1aa8065fbc584bbfa6f110f452760, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maskLocations: []
+  positions: []
   numberOfHits: 0
   maxHits: 2
   noHit: {fileID: 21300000, guid: 07ab6f921c80d624b8a1d2662c3a39f3, type: 3}
   oneHit: {fileID: 0}
   brickSprite: {fileID: 0}
   brickValue: 5
+  powerup: {fileID: 0}
   gameMaster: {fileID: 0}
 --- !u!60 &335171927153290051
 PolygonCollider2D:
