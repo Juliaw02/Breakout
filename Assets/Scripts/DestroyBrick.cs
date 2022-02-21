@@ -16,6 +16,7 @@ public class DestroyBrick : MonoBehaviour
     public GameMaster gameMaster;
 
     public Transform[] maskLocations;
+    public Transform explosion;
 
     // Start is called before the first frame update
     void Start()
@@ -94,6 +95,11 @@ public class DestroyBrick : MonoBehaviour
                 gameMaster.UpdateScore(+brickValue);
             }
         }
+        
+        //if (gameObject.tag == "Fish1")
+        //{
+            //Instantiate(explosion, transform.position);
+        //}
 
     }
 }

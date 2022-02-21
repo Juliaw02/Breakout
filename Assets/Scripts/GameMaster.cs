@@ -58,9 +58,22 @@ public class GameMaster : MonoBehaviour
             SceneManager.LoadScene("WinScene");
         }
 
+        // Press H to get to the Main Menu
         if (Input.GetKeyDown(KeyCode.H))
         {
             SceneManager.LoadScene("MainMenu");
+        }
+
+        // Press G to get to the lose scene
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            SceneManager.LoadScene("LoseScene");
+        }
+
+        // Press Y to get to the win scene
+        if (Input.GetKeyDown(KeyCode.Y))
+        {
+            SceneManager.LoadScene("WinScene");
         }
     }
 
