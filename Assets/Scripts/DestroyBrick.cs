@@ -6,43 +6,28 @@ public class DestroyBrick : MonoBehaviour
 {
     public int numberOfHits = 0;
     public int maxHits;
+    public int brickValue;
+
     public Sprite noHit;
     public Sprite oneHit;
     public SpriteRenderer brickSprite;
-    public int brickValue;
+
     public Transform powerup;
     public GameMaster gameMaster;
 
-    //public Vector3[] maskLocations4 =
-    //{
-        //new Vector3 {x = -7.5, y = 1.75, z = 0},
-        //new Vector3 {x = -4.5, y = 0.75, z = 0},
-        //new Vector3 {x = -1.5, y = -0.25, z = 0},
-        //new Vector3 {x = 1.5, y = -0.25, z = 0},
-        //new Vector3 {x = 7.5, y = -0.25, z = 0},
-        //new Vector3 {x = -4.5, y = -0.25, z = 0},
-        //new Vector3 {x = -7.5, y = 0.25, z = 0},
-        //new Vector3 {x = -7.5, y = 3.75, z = 0}
-    //};
+    public Transform[] maskLocations;
 
     // Start is called before the first frame update
     void Start()
     {
         brickSprite = GetComponent<SpriteRenderer>();
         gameMaster.GetComponent<GameMaster>();
-
     }
 
     // Update is called once per frame
     void Update()
     {
-        // if the object is a mask and has been hit once
-        //if (gameObject.tag == "Mask" && numberOfHits == 1)
-        //{
-            // teleport?
-            //int w = Random.Range(0, maskLocations4.Length);
-            //transform.position = maskLocations4[w].position;
-        //}
+        
     }
 
     // Collision rather than Trigger so the ball actually collides
@@ -57,7 +42,7 @@ public class DestroyBrick : MonoBehaviour
         if (this.transform.CompareTag("Bricks"))
         {
             int randomChance = Random.Range(1, 101);
-
+            // 40% chance
             if (randomChance < 40)
             {
                 Instantiate(powerup, this.transform.position, other.transform.rotation);
@@ -71,14 +56,24 @@ public class DestroyBrick : MonoBehaviour
             Destroy(this.gameObject);
         }
 
+        // Teleporting mask bricks (if the object is a mask and has been hit once)
+        if (gameObject.tag == "Mask" && numberOfHits == 1)
+        {
+            // teleport to random location from spawn points
+            int i = Random.Range(0, maskLocations.Length);
+            transform.position = maskLocations[i].position;
+        }
+
         // Exploding fish bricks
         GameObject[] fish3Box = GameObject.FindGameObjectsWithTag("Fish3Box");
         GameObject[] fish2Box = GameObject.FindGameObjectsWithTag("Fish2Box");
         GameObject[] fish1Box = GameObject.FindGameObjectsWithTag("Fish1Box");
         for (int i = 0; i < fish3Box.Length; i++)
         {
+            // if the 3rd fish was hit
             if (gameObject.tag == "Fish3")
             {
+                // destroy the bricks around it in that fish's group
                 Destroy(fish3Box[i]);
                 gameMaster.UpdateScore(+brickValue);
             }

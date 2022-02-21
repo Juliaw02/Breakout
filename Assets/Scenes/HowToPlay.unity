@@ -181,7 +181,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 83c03a7c6f8ba8d4cb3bfb577c3d20e1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6469a7530258ead49b7307719ceafb21, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -530,8 +530,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0.02745098, g: 0.5254902, b: 0.5254902, a: 1}
-    m_HighlightedColor: {r: 0.02745098, g: 0.5254902, b: 0.5254902, a: 1}
-    m_PressedColor: {r: 0.02745098, g: 0.5254902, b: 0.5254902, a: 1}
+    m_HighlightedColor: {r: 0.105882354, g: 0.6313726, b: 0.6313726, a: 1}
+    m_PressedColor: {r: 0.015686275, g: 0.4509804, b: 0.4509804, a: 1}
     m_SelectedColor: {r: 0.02745098, g: 0.5254902, b: 0.5254902, a: 1}
     m_DisabledColor: {r: 0.02745098, g: 0.5254902, b: 0.5254902, a: 0.5019608}
     m_ColorMultiplier: 1
