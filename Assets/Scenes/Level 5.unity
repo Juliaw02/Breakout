@@ -3482,7 +3482,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6910431391428197259, guid: 89dd72b58c0ad3141bfddeb83d4271ed, type: 3}
       propertyPath: m_TagString
-      value: Bricks
+      value: Fish2Box
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89dd72b58c0ad3141bfddeb83d4271ed, type: 3}

@@ -60,8 +60,8 @@ public class DestroyBrick : MonoBehaviour
         if (gameObject.tag == "Mask" && numberOfHits == 1)
         {
             // teleport to random location from spawn points
-            int i = Random.Range(0, maskLocations.Length);
-            transform.position = maskLocations[i].position;
+            int u = Random.Range(0, maskLocations.Length);
+            transform.position = maskLocations[u].position;
         }
 
         // Exploding fish bricks
@@ -95,5 +95,8 @@ public class DestroyBrick : MonoBehaviour
             }
         }
 
+        // on 5th level, to finish the game instad of max points it will be like
+        // if there are 9 bricks left (the turtles and the cans)
+        // change the max level of points for 5th level only to just be really high or something
     }
 }
