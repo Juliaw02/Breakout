@@ -13,6 +13,8 @@ public class BallController : MonoBehaviour
 
     public GameMaster gameMaster;
 
+    public Transform explosion;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -52,6 +54,28 @@ public class BallController : MonoBehaviour
             // the ball's position will reset back to the starting position
             transform.position = startPosition;
             ballLaunched = false;
+        }
+    }
+
+    // Fish explosion particles
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.transform.CompareTag("Fish1"))
+        {
+            Transform newExplosion1 = Instantiate(explosion, other.transform.position, other.transform.rotation);
+            Destroy(newExplosion1.gameObject, 2.5f);
+        }
+
+        if (other.transform.CompareTag("Fish2"))
+        {
+            Transform newExplosion2 = Instantiate(explosion, other.transform.position, other.transform.rotation);
+            Destroy(newExplosion2.gameObject, 2.5f);
+        }
+
+        if (other.transform.CompareTag("Fish3"))
+        {
+            Transform newExplosion3 = Instantiate(explosion, other.transform.position, other.transform.rotation);
+            Destroy(newExplosion3.gameObject, 2.5f);
         }
     }
 }

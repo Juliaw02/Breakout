@@ -37,6 +37,7 @@ public class PaddleController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        // extra life powerup
         if (other.CompareTag("ExtraLife"))
         {
             gameMaster.UpdateLives(1);

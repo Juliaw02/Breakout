@@ -77,6 +77,7 @@ public class GameMaster : MonoBehaviour
         }
     }
 
+    // HUD
     public void UpdateLives(int changeInLives)
     {
         playerLives += changeInLives;
@@ -91,6 +92,7 @@ public class GameMaster : MonoBehaviour
         scoreText.text = "SCORE: " + playerPoints;
     }
 
+    // Buttons
     public void PlayAgain()
     {
         SceneManager.LoadScene("Level 1");
