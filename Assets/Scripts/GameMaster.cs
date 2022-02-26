@@ -16,7 +16,7 @@ public class GameMaster : MonoBehaviour
     void Start()
     {
         scoreText.text = "SCORE: " + playerPoints;
-        livesText.text = "LIVES: " + playerLives;
+        livesText.text = "BEACH BALLS: " + playerLives;
     }
 
     // Update is called once per frame
@@ -53,7 +53,7 @@ public class GameMaster : MonoBehaviour
         }
 
         // Level 5 to Win
-        if (playerPoints >= maxLevelPoints || Input.GetKeyDown(KeyCode.N) && SceneManager.GetActiveScene().name == "Level 5")
+        if (FindObjectsOfType<DestroyBrick>().Length == 0 || Input.GetKeyDown(KeyCode.N) && SceneManager.GetActiveScene().name == "Level 5")
         {
             SceneManager.LoadScene("WinScene");
         }
