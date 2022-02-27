@@ -12,14 +12,23 @@ public class BallController : MonoBehaviour
     public Vector3 startPosition;
 
     public GameMaster gameMaster;
-
     public Transform explosion;
+
+    public AudioSource clipSource;
+    public AudioClip[] bottleArray;
+    public AudioClip[] wrapperArray;
+    public AudioClip[] canArray;
+    public AudioClip[] maskArray;
+    public AudioClip[] deathArray;
+    public AudioClip[] bounceArray;
+    public AudioClip[] turtleArray;
 
     // Start is called before the first frame update
     void Start()
     {
         ballRigidbody = GetComponent<Rigidbody2D>();
         gameMaster.GetComponent<GameMaster>();
+        clipSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -36,6 +45,10 @@ public class BallController : MonoBehaviour
         // If R is pressed reset the ball position
         if (Input.GetKeyDown(KeyCode.R))
         {
+            int bounceIndexA;
+            bounceIndexA = Random.Range(0, bounceArray.Length);
+            clipSource.PlayOneShot(bounceArray[bounceIndexA]);
+
             ballRigidbody.velocity = Vector3.zero;
             transform.position = startPosition;
             ballLaunched = false;
@@ -47,6 +60,8 @@ public class BallController : MonoBehaviour
         // If the ball runs into an object with this tag
         if (other.CompareTag ("DefeatZone"))
         {
+            clipSource.PlayOneShot(deathArray[0]);
+
             // the ball's velocity will go to 0
             ballRigidbody.velocity = Vector3.zero;
             // tracking lost lives
@@ -57,9 +72,39 @@ public class BallController : MonoBehaviour
         }
     }
 
-    // Fish explosion particles
     void OnCollisionEnter2D(Collision2D other)
     {
+        DestroyBrick destroyBrick = other.gameObject.GetComponent<DestroyBrick>();
+
+        // Bottle sound effects
+        if (other.gameObject.name == "1HitBottle")
+        {
+            int bottleIndex;
+            bottleIndex = Random.Range(0, bottleArray.Length);
+            clipSource.PlayOneShot(bottleArray[bottleIndex]);
+        }
+
+        // Wrapper sound effects
+        if (other.gameObject.name == "2HitWrapper")
+        {
+            clipSource.PlayOneShot(wrapperArray[0]);
+        }
+
+        // Can sound effects
+        if (other.gameObject.name == "UnbreakableCan")
+        {
+            int canIndex;
+            canIndex = Random.Range(0, canArray.Length);
+            clipSource.PlayOneShot(canArray[canIndex]);
+        }
+
+        // Mask sound effects
+        if (other.gameObject.name == "5FaceMask")
+        {
+            clipSource.PlayOneShot(maskArray[0]);
+        }
+
+        // Fish explosion particles
         if (other.transform.CompareTag("Fish1"))
         {
             Transform newExplosion1 = Instantiate(explosion, other.transform.position, other.transform.rotation);
@@ -77,5 +122,29 @@ public class BallController : MonoBehaviour
             Transform newExplosion3 = Instantiate(explosion, other.transform.position, other.transform.rotation);
             Destroy(newExplosion3.gameObject, 2.5f);
         }
+
+        // Wall bounce sound
+        if (other.gameObject.name == "Wall" || other.gameObject.name == "Paddle")
+        {
+            int bounceIndexB;
+            bounceIndexB = Random.Range(0, bounceArray.Length);
+            clipSource.PlayOneShot(bounceArray[bounceIndexB]);
+        }
+
+        // Turtle shell sounds
+        if (other.gameObject.name == "BigTurtle")
+        {
+            clipSource.PlayOneShot(turtleArray[0]);
+        }
+        if (other.gameObject.name == "MedTurtle")
+        {
+            clipSource.PlayOneShot(turtleArray[1]);
+        }
+        if (other.gameObject.name == "SmallTurtle")
+        {
+            clipSource.PlayOneShot(turtleArray[2]);
+        }
+
+
     }
 }

@@ -99,11 +99,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numberOfHits: 0
   maxHits: 1
+  brickValue: 1
   noHit: {fileID: 21300000, guid: 7a3698efa340a094298417a6f955a1ac, type: 3}
   oneHit: {fileID: 0}
   brickSprite: {fileID: 0}
-  brickValue: 1
+  powerup: {fileID: 0}
   gameMaster: {fileID: 0}
+  maskLocations: []
 --- !u!60 &-3109383102949936358
 PolygonCollider2D:
   m_ObjectHideFlags: 0

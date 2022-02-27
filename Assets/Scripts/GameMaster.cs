@@ -29,31 +29,31 @@ public class GameMaster : MonoBehaviour
         }
 
         // Level 1 to 2
-        if (playerPoints >= maxLevelPoints || Input.GetKeyDown(KeyCode.N) && SceneManager.GetActiveScene().name == "Level 1")
+        if (SceneManager.GetActiveScene().name == "Level 1" && playerPoints >= maxLevelPoints || Input.GetKeyDown(KeyCode.N) && SceneManager.GetActiveScene().name == "Level 1")
         {
             SceneManager.LoadScene("Level 2");
         }
 
         // Level 2 to 3
-        if (playerPoints >= maxLevelPoints || Input.GetKeyDown(KeyCode.N) && SceneManager.GetActiveScene().name == "Level 2")
+        if (SceneManager.GetActiveScene().name == "Level 2" && playerPoints >= maxLevelPoints || Input.GetKeyDown(KeyCode.N) && SceneManager.GetActiveScene().name == "Level 2")
         {
             SceneManager.LoadScene("Level 3");
         }
 
         // Level 3 to 4
-        if (playerPoints >= maxLevelPoints || Input.GetKeyDown(KeyCode.N) && SceneManager.GetActiveScene().name == "Level 3")
+        if (SceneManager.GetActiveScene().name == "Level 3" && playerPoints >= maxLevelPoints || Input.GetKeyDown(KeyCode.N) && SceneManager.GetActiveScene().name == "Level 3")
         {
             SceneManager.LoadScene("Level 4");
         }
 
         // Level 4 to 5
-        if (playerPoints >= maxLevelPoints || Input.GetKeyDown(KeyCode.N) && SceneManager.GetActiveScene().name == "Level 4")
+        if (SceneManager.GetActiveScene().name == "Level 4" && playerPoints >= maxLevelPoints || Input.GetKeyDown(KeyCode.N) && SceneManager.GetActiveScene().name == "Level 4")
         {
             SceneManager.LoadScene("Level 5");
         }
 
         // Level 5 to Win
-        if (FindObjectsOfType<DestroyBrick>().Length == 0 || Input.GetKeyDown(KeyCode.N) && SceneManager.GetActiveScene().name == "Level 5")
+        if (SceneManager.GetActiveScene().name == "Level 5" && FindObjectsOfType<DestroyBrick>().Length == 0 || Input.GetKeyDown(KeyCode.N) && SceneManager.GetActiveScene().name == "Level 5")
         {
             SceneManager.LoadScene("WinScene");
         }
@@ -82,7 +82,7 @@ public class GameMaster : MonoBehaviour
     {
         playerLives += changeInLives;
 
-        livesText.text = "LIVES: " + playerLives;
+        livesText.text = "BEACH BALLS: " + playerLives;
     }
 
     public void UpdateScore(int points)

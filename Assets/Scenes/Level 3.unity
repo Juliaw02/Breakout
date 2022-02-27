@@ -266,7 +266,7 @@ PrefabInstance:
       objectReference: {fileID: 1016740985}
     - target: {fileID: 2937771470859093474, guid: cf8a338979033d547879cac169e10550, type: 3}
       propertyPath: m_Name
-      value: 1HitBottle (13)
+      value: 1HitBottle
       objectReference: {fileID: 0}
     - target: {fileID: 2937771470859093474, guid: cf8a338979033d547879cac169e10550, type: 3}
       propertyPath: m_TagString
@@ -335,7 +335,7 @@ PrefabInstance:
       objectReference: {fileID: 1016740985}
     - target: {fileID: 2937771470859093474, guid: cf8a338979033d547879cac169e10550, type: 3}
       propertyPath: m_Name
-      value: 1HitBottle (5)
+      value: 1HitBottle
       objectReference: {fileID: 0}
     - target: {fileID: 2937771470859093474, guid: cf8a338979033d547879cac169e10550, type: 3}
       propertyPath: m_TagString
@@ -401,7 +401,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 922489252936736307, guid: f71cd5753fdf8dc44ad12d6edff413e6, type: 3}
       propertyPath: m_Name
-      value: UnbreakableCan (2)
+      value: UnbreakableCan
       objectReference: {fileID: 0}
     - target: {fileID: 922489252936736308, guid: f71cd5753fdf8dc44ad12d6edff413e6, type: 3}
       propertyPath: m_RootOrder
@@ -518,7 +518,7 @@ PrefabInstance:
       objectReference: {fileID: 1016740985}
     - target: {fileID: 2937771470859093474, guid: cf8a338979033d547879cac169e10550, type: 3}
       propertyPath: m_Name
-      value: 1HitBottle (9)
+      value: 1HitBottle
       objectReference: {fileID: 0}
     - target: {fileID: 2937771470859093474, guid: cf8a338979033d547879cac169e10550, type: 3}
       propertyPath: m_TagString
@@ -579,7 +579,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 922489252936736307, guid: f71cd5753fdf8dc44ad12d6edff413e6, type: 3}
       propertyPath: m_Name
-      value: UnbreakableCan (1)
+      value: UnbreakableCan
       objectReference: {fileID: 0}
     - target: {fileID: 922489252936736308, guid: f71cd5753fdf8dc44ad12d6edff413e6, type: 3}
       propertyPath: m_RootOrder
@@ -803,7 +803,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6910431391428197259, guid: 89dd72b58c0ad3141bfddeb83d4271ed, type: 3}
       propertyPath: m_Name
-      value: 2HitWrapper (6)
+      value: 2HitWrapper
       objectReference: {fileID: 0}
     - target: {fileID: 6910431391428197259, guid: 89dd72b58c0ad3141bfddeb83d4271ed, type: 3}
       propertyPath: m_TagString
@@ -850,8 +850,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -65, y: 30}
-  m_SizeDelta: {x: 90, y: 45.0105}
+  m_AnchoredPosition: {x: -108.44, y: 30}
+  m_SizeDelta: {x: 176.881, y: 45.0105}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &516943426
 MonoBehaviour:
@@ -1251,7 +1251,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6910431391428197259, guid: 89dd72b58c0ad3141bfddeb83d4271ed, type: 3}
       propertyPath: m_Name
-      value: 2HitWrapper (2)
+      value: 2HitWrapper
       objectReference: {fileID: 0}
     - target: {fileID: 6910431391428197259, guid: 89dd72b58c0ad3141bfddeb83d4271ed, type: 3}
       propertyPath: m_TagString
@@ -1392,7 +1392,7 @@ PrefabInstance:
       objectReference: {fileID: 1016740985}
     - target: {fileID: 2937771470859093474, guid: cf8a338979033d547879cac169e10550, type: 3}
       propertyPath: m_Name
-      value: 1HitBottle (3)
+      value: 1HitBottle
       objectReference: {fileID: 0}
     - target: {fileID: 2937771470859093474, guid: cf8a338979033d547879cac169e10550, type: 3}
       propertyPath: m_TagString
@@ -1461,7 +1461,7 @@ GameObject:
   - component: {fileID: 840059046}
   - component: {fileID: 840059045}
   m_Layer: 0
-  m_Name: Wall (2)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1576,7 +1576,7 @@ PrefabInstance:
       objectReference: {fileID: 1016740985}
     - target: {fileID: 2937771470859093474, guid: cf8a338979033d547879cac169e10550, type: 3}
       propertyPath: m_Name
-      value: 1HitBottle (7)
+      value: 1HitBottle
       objectReference: {fileID: 0}
     - target: {fileID: 2937771470859093474, guid: cf8a338979033d547879cac169e10550, type: 3}
       propertyPath: m_TagString
@@ -1694,7 +1694,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6910431391428197259, guid: 89dd72b58c0ad3141bfddeb83d4271ed, type: 3}
       propertyPath: m_Name
-      value: 2HitWrapper (1)
+      value: 2HitWrapper
       objectReference: {fileID: 0}
     - target: {fileID: 6910431391428197259, guid: 89dd72b58c0ad3141bfddeb83d4271ed, type: 3}
       propertyPath: m_TagString
@@ -1816,7 +1816,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6910431391428197259, guid: 89dd72b58c0ad3141bfddeb83d4271ed, type: 3}
       propertyPath: m_Name
-      value: 2HitWrapper (3)
+      value: 2HitWrapper
       objectReference: {fileID: 0}
     - target: {fileID: 6910431391428197259, guid: 89dd72b58c0ad3141bfddeb83d4271ed, type: 3}
       propertyPath: m_TagString
@@ -1846,7 +1846,7 @@ PrefabInstance:
       objectReference: {fileID: 1016740985}
     - target: {fileID: 2937771470859093474, guid: cf8a338979033d547879cac169e10550, type: 3}
       propertyPath: m_Name
-      value: 1HitBottle (2)
+      value: 1HitBottle
       objectReference: {fileID: 0}
     - target: {fileID: 2937771470859093474, guid: cf8a338979033d547879cac169e10550, type: 3}
       propertyPath: m_TagString
@@ -1986,7 +1986,7 @@ PrefabInstance:
       objectReference: {fileID: 1016740985}
     - target: {fileID: 2937771470859093474, guid: cf8a338979033d547879cac169e10550, type: 3}
       propertyPath: m_Name
-      value: 1HitBottle (4)
+      value: 1HitBottle
       objectReference: {fileID: 0}
     - target: {fileID: 2937771470859093474, guid: cf8a338979033d547879cac169e10550, type: 3}
       propertyPath: m_TagString
@@ -2055,7 +2055,7 @@ PrefabInstance:
       objectReference: {fileID: 1016740985}
     - target: {fileID: 2937771470859093474, guid: cf8a338979033d547879cac169e10550, type: 3}
       propertyPath: m_Name
-      value: 1HitBottle (1)
+      value: 1HitBottle
       objectReference: {fileID: 0}
     - target: {fileID: 2937771470859093474, guid: cf8a338979033d547879cac169e10550, type: 3}
       propertyPath: m_TagString
@@ -2178,7 +2178,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6910431391428197259, guid: 89dd72b58c0ad3141bfddeb83d4271ed, type: 3}
       propertyPath: m_Name
-      value: 2HitWrapper (4)
+      value: 2HitWrapper
       objectReference: {fileID: 0}
     - target: {fileID: 6910431391428197259, guid: 89dd72b58c0ad3141bfddeb83d4271ed, type: 3}
       propertyPath: m_TagString
@@ -2406,7 +2406,7 @@ PrefabInstance:
       objectReference: {fileID: 1016740985}
     - target: {fileID: 2937771470859093474, guid: cf8a338979033d547879cac169e10550, type: 3}
       propertyPath: m_Name
-      value: 1HitBottle (10)
+      value: 1HitBottle
       objectReference: {fileID: 0}
     - target: {fileID: 2937771470859093474, guid: cf8a338979033d547879cac169e10550, type: 3}
       propertyPath: m_TagString
@@ -2475,7 +2475,7 @@ PrefabInstance:
       objectReference: {fileID: 1016740985}
     - target: {fileID: 2937771470859093474, guid: cf8a338979033d547879cac169e10550, type: 3}
       propertyPath: m_Name
-      value: 1HitBottle (14)
+      value: 1HitBottle
       objectReference: {fileID: 0}
     - target: {fileID: 2937771470859093474, guid: cf8a338979033d547879cac169e10550, type: 3}
       propertyPath: m_TagString
@@ -2613,7 +2613,7 @@ PrefabInstance:
       objectReference: {fileID: 1016740985}
     - target: {fileID: 2937771470859093474, guid: cf8a338979033d547879cac169e10550, type: 3}
       propertyPath: m_Name
-      value: 1HitBottle (11)
+      value: 1HitBottle
       objectReference: {fileID: 0}
     - target: {fileID: 2937771470859093474, guid: cf8a338979033d547879cac169e10550, type: 3}
       propertyPath: m_TagString
@@ -2682,7 +2682,7 @@ PrefabInstance:
       objectReference: {fileID: 1016740985}
     - target: {fileID: 2937771470859093474, guid: cf8a338979033d547879cac169e10550, type: 3}
       propertyPath: m_Name
-      value: 1HitBottle (8)
+      value: 1HitBottle
       objectReference: {fileID: 0}
     - target: {fileID: 2937771470859093474, guid: cf8a338979033d547879cac169e10550, type: 3}
       propertyPath: m_TagString
@@ -2800,7 +2800,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6910431391428197259, guid: 89dd72b58c0ad3141bfddeb83d4271ed, type: 3}
       propertyPath: m_Name
-      value: 2HitWrapper (5)
+      value: 2HitWrapper
       objectReference: {fileID: 0}
     - target: {fileID: 6910431391428197259, guid: 89dd72b58c0ad3141bfddeb83d4271ed, type: 3}
       propertyPath: m_TagString
@@ -2817,7 +2817,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2993319080622093539, guid: 8634c9f787bb4824286736fe945228b9, type: 3}
       propertyPath: m_Name
-      value: LargeTurtle
+      value: BigTurtle
       objectReference: {fileID: 0}
     - target: {fileID: 2993319080622093542, guid: 8634c9f787bb4824286736fe945228b9, type: 3}
       propertyPath: m_RootOrder
@@ -2882,7 +2882,7 @@ PrefabInstance:
       objectReference: {fileID: 1016740985}
     - target: {fileID: 2937771470859093474, guid: cf8a338979033d547879cac169e10550, type: 3}
       propertyPath: m_Name
-      value: 1HitBottle (6)
+      value: 1HitBottle
       objectReference: {fileID: 0}
     - target: {fileID: 2937771470859093474, guid: cf8a338979033d547879cac169e10550, type: 3}
       propertyPath: m_TagString
@@ -2951,7 +2951,7 @@ PrefabInstance:
       objectReference: {fileID: 1016740985}
     - target: {fileID: 2937771470859093474, guid: cf8a338979033d547879cac169e10550, type: 3}
       propertyPath: m_Name
-      value: 1HitBottle (12)
+      value: 1HitBottle
       objectReference: {fileID: 0}
     - target: {fileID: 2937771470859093474, guid: cf8a338979033d547879cac169e10550, type: 3}
       propertyPath: m_TagString
@@ -3088,7 +3088,7 @@ GameObject:
   - component: {fileID: 2146319254}
   - component: {fileID: 2146319253}
   m_Layer: 0
-  m_Name: Wall (3)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

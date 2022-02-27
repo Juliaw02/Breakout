@@ -17,11 +17,16 @@ public class DestroyBrick : MonoBehaviour
 
     public Transform[] maskLocations;
 
+    public AudioSource clipSource;
+    public AudioClip[] wrapperArray;
+    public AudioClip[] maskArray;
+
     // Start is called before the first frame update
     void Start()
     {
         brickSprite = GetComponent<SpriteRenderer>();
         gameMaster.GetComponent<GameMaster>();
+        clipSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -56,12 +61,19 @@ public class DestroyBrick : MonoBehaviour
             Destroy(this.gameObject);
         }
 
+        // Wrapper Crumple sound (before destroy)
+        if (gameObject.name == "2HitWrapper" && numberOfHits < maxHits)
+        {
+            clipSource.PlayOneShot(wrapperArray[0]);
+        }
+
         // Teleporting mask bricks (if the object is a mask and has been hit once)
         if (gameObject.tag == "Mask" && numberOfHits == 1)
         {
             // teleport to random location from spawn points
             int u = Random.Range(0, maskLocations.Length);
             transform.position = maskLocations[u].position;
+            clipSource.PlayOneShot(maskArray[0]);
         }
 
         // Exploding fish bricks
@@ -94,9 +106,5 @@ public class DestroyBrick : MonoBehaviour
                 gameMaster.UpdateScore(+brickValue);
             }
         }
-
-        // on 5th level, to finish the game instad of max points it will be like
-        // if there are 9 bricks left (the turtles and the cans)
-        // change the max level of points for 5th level only to just be really high or something
     }
 }

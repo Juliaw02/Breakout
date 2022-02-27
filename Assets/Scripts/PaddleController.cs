@@ -12,10 +12,13 @@ public class PaddleController : MonoBehaviour
 
     public GameMaster gameMaster;
 
+    public AudioSource clipSource;
+
     // Start is called before the first frame update
     void Start()
     {
         gameMaster.GetComponent<GameMaster>();
+        clipSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -40,6 +43,7 @@ public class PaddleController : MonoBehaviour
         // extra life powerup
         if (other.CompareTag("ExtraLife"))
         {
+            clipSource.Play();
             gameMaster.UpdateLives(1);
             Destroy(other.gameObject);
         }
