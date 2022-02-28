@@ -117,5 +117,4 @@ public class GameMaster : MonoBehaviour
     {
         Application.Quit();
     }
-
 }
