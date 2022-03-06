@@ -3302,6 +3302,14 @@ PrefabInstance:
       propertyPath: ballRigidbody
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4343262982983040352, guid: 81be91c0fe99f3240b35428498216479, type: 3}
+      propertyPath: wallParticles
+      value: 
+      objectReference: {fileID: 8703331042828091206, guid: d2cefd9f1837511419f5755632d77997, type: 3}
+    - target: {fileID: 4343262982983040352, guid: 81be91c0fe99f3240b35428498216479, type: 3}
+      propertyPath: defeatParticles
+      value: 
+      objectReference: {fileID: 8661047581511097784, guid: 68523b0eb0cf9524e971438d9bf0f204, type: 3}
     - target: {fileID: 4343262982983040353, guid: 81be91c0fe99f3240b35428498216479, type: 3}
       propertyPath: m_Material
       value: 

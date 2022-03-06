@@ -737,6 +737,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4343262982983040352, guid: 81be91c0fe99f3240b35428498216479, type: 3}
+      propertyPath: wallParticles
+      value: 
+      objectReference: {fileID: 8703331042828091206, guid: d2cefd9f1837511419f5755632d77997, type: 3}
+    - target: {fileID: 4343262982983040352, guid: 81be91c0fe99f3240b35428498216479, type: 3}
+      propertyPath: defeatParticles
+      value: 
+      objectReference: {fileID: 8661047581511097784, guid: 68523b0eb0cf9524e971438d9bf0f204, type: 3}
+    - target: {fileID: 4343262982983040352, guid: 81be91c0fe99f3240b35428498216479, type: 3}
       propertyPath: bottleArray.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -1214,13 +1222,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 590312876}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7132504, w: 0.7009094}
+  m_LocalRotation: {x: 0, y: 0, z: 0.008726558, w: 0.999962}
   m_LocalPosition: {x: 9.385542, y: 0, z: 0}
-  m_LocalScale: {x: 12, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 12, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 91}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1}
 --- !u!1001 &643904784
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2872,13 +2880,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1556954317}
-  m_LocalRotation: {x: 0, y: 0, z: 0.70090926, w: 0.71325046}
+  m_LocalRotation: {x: 0, y: 0, z: -0.008726465, w: 0.999962}
   m_LocalPosition: {x: -9.385542, y: 0, z: 0}
-  m_LocalScale: {x: 12, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 12, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 89}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -1}
 --- !u!1001 &1568095990
 PrefabInstance:
   m_ObjectHideFlags: 0

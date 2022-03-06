@@ -13,6 +13,8 @@ public class BallController : MonoBehaviour
 
     public GameMaster gameMaster;
     public Transform explosion;
+    public Transform wallParticles;
+    public Transform defeatParticles;
 
     public AudioSource clipSource;
     public AudioClip[] bottleArray;
@@ -70,6 +72,13 @@ public class BallController : MonoBehaviour
             transform.position = startPosition;
             ballLaunched = false;
         }
+
+        // Defeat particles
+        if (other.gameObject.name == "Defeat")
+        {
+            Transform newDefeatParticles = Instantiate(defeatParticles, other.transform.position, this.transform.rotation);
+            Destroy(newDefeatParticles.gameObject, 2.5f);
+        }
     }
 
     void OnCollisionEnter2D(Collision2D other)
@@ -121,6 +130,13 @@ public class BallController : MonoBehaviour
         {
             Transform newExplosion3 = Instantiate(explosion, other.transform.position, other.transform.rotation);
             Destroy(newExplosion3.gameObject, 2.5f);
+        }
+
+        // Wall particles
+        if (other.gameObject.name == "Wall")
+        {
+            Transform newWallParticles = Instantiate(wallParticles, this.transform.position, other.transform.rotation);
+            Destroy(newWallParticles.gameObject, 1.5f);
         }
 
         // Wall bounce sound
