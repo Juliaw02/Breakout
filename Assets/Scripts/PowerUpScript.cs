@@ -17,6 +17,7 @@ public class PowerUpScript : MonoBehaviour
     {
         transform.Translate(new Vector2(0.0f, -1.0f) * Time.deltaTime * starSpeed);
 
+        // If the powerup falls below the paddle and screen
         if (transform.position.y < -6.0f)
         {
             Destroy(gameObject);

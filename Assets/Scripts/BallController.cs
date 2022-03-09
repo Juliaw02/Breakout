@@ -36,7 +36,7 @@ public class BallController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // If the spacebar has been pressed
+        // Launch the ball if the spacebar is pressed
         if (Input.GetKeyDown(KeyCode.Space) && !ballLaunched)
         {
             randomNumber = Random.Range(0, startDirections.Length);
@@ -44,7 +44,7 @@ public class BallController : MonoBehaviour
             ballLaunched = true;
         }
 
-        // If R is pressed reset the ball position
+        // Reset the ball's position if R is pressed
         if (Input.GetKeyDown(KeyCode.R))
         {
             int bounceIndexA;
@@ -64,11 +64,11 @@ public class BallController : MonoBehaviour
         {
             clipSource.PlayOneShot(deathArray[0]);
 
-            // the ball's velocity will go to 0
+            // The ball's velocity will go to 0
             ballRigidbody.velocity = Vector3.zero;
-            // tracking lost lives
+            // Tracking lost lives
             gameMaster.UpdateLives(-1);
-            // the ball's position will reset back to the starting position
+            // The ball's position will reset back to the starting position
             transform.position = startPosition;
             ballLaunched = false;
         }
@@ -119,13 +119,11 @@ public class BallController : MonoBehaviour
             Transform newExplosion1 = Instantiate(explosion, other.transform.position, other.transform.rotation);
             Destroy(newExplosion1.gameObject, 2.5f);
         }
-
         if (other.transform.CompareTag("Fish2"))
         {
             Transform newExplosion2 = Instantiate(explosion, other.transform.position, other.transform.rotation);
             Destroy(newExplosion2.gameObject, 2.5f);
         }
-
         if (other.transform.CompareTag("Fish3"))
         {
             Transform newExplosion3 = Instantiate(explosion, other.transform.position, other.transform.rotation);
@@ -160,7 +158,5 @@ public class BallController : MonoBehaviour
         {
             clipSource.PlayOneShot(turtleArray[2]);
         }
-
-
     }
 }

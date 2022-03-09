@@ -22,7 +22,7 @@ public class GameMaster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        // Go to lose screen if you run out of lives
         if (playerLives <= 0)
         {
             SceneManager.LoadScene("LoseScene");
@@ -33,25 +33,21 @@ public class GameMaster : MonoBehaviour
         {
             SceneManager.LoadScene("Level 2");
         }
-
         // Level 2 to 3
         if (SceneManager.GetActiveScene().name == "Level 2" && playerPoints >= maxLevelPoints || Input.GetKeyDown(KeyCode.N) && SceneManager.GetActiveScene().name == "Level 2")
         {
             SceneManager.LoadScene("Level 3");
         }
-
         // Level 3 to 4
         if (SceneManager.GetActiveScene().name == "Level 3" && playerPoints >= maxLevelPoints || Input.GetKeyDown(KeyCode.N) && SceneManager.GetActiveScene().name == "Level 3")
         {
             SceneManager.LoadScene("Level 4");
         }
-
         // Level 4 to 5
         if (SceneManager.GetActiveScene().name == "Level 4" && playerPoints >= maxLevelPoints || Input.GetKeyDown(KeyCode.N) && SceneManager.GetActiveScene().name == "Level 4")
         {
             SceneManager.LoadScene("Level 5");
         }
-
         // Level 5 to Win
         if (SceneManager.GetActiveScene().name == "Level 5" && FindObjectsOfType<DestroyBrick>().Length == 0 || Input.GetKeyDown(KeyCode.N) && SceneManager.GetActiveScene().name == "Level 5")
         {
@@ -63,13 +59,11 @@ public class GameMaster : MonoBehaviour
         {
             SceneManager.LoadScene("MainMenu");
         }
-
         // Press G to get to the lose scene
         if (Input.GetKeyDown(KeyCode.G))
         {
             SceneManager.LoadScene("LoseScene");
         }
-
         // Press Y to get to the win scene
         if (Input.GetKeyDown(KeyCode.Y))
         {

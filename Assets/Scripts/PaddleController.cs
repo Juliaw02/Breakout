@@ -24,6 +24,7 @@ public class PaddleController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Boundaries for paddle
         playerInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * Time.deltaTime * paddleSpeed * playerInput);
         
@@ -40,7 +41,7 @@ public class PaddleController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        // extra life powerup
+        // If the paddle hits the extra life powerup
         if (other.CompareTag("ExtraLife"))
         {
             clipSource.Play();

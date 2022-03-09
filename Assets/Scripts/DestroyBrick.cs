@@ -47,30 +47,30 @@ public class DestroyBrick : MonoBehaviour
         if (this.transform.CompareTag("Bricks"))
         {
             int randomChance = Random.Range(1, 101);
-            // 40% chance
-            if (randomChance < 30)
+            // 25% chance
+            if (randomChance < 25)
             {
                 Instantiate(powerup, this.transform.position, other.transform.rotation);
             }
         }
 
-        // If brick is hit max # of times, update score and destroy brick
+        // Update score and destroy brick if it is hit max # of times
         if (numberOfHits >= maxHits)
         {
             gameMaster.UpdateScore(+brickValue);
             Destroy(this.gameObject);
         }
 
-        // Wrapper Crumple sound (before destroy)
+        // Wrapper crumple sound (1st hit)
         if (gameObject.name == "2HitWrapper" && numberOfHits < maxHits)
         {
             clipSource.PlayOneShot(wrapperArray[0]);
         }
 
-        // Teleporting mask bricks (if the object is a mask and has been hit once)
+        // Teleporting mask bricks
         if (gameObject.tag == "Mask" && numberOfHits == 1)
         {
-            // teleport to random location from spawn points
+            // Teleport to random location from spawn points
             int u = Random.Range(0, maskLocations.Length);
             transform.position = maskLocations[u].position;
             clipSource.PlayOneShot(maskArray[0]);
@@ -82,10 +82,10 @@ public class DestroyBrick : MonoBehaviour
         GameObject[] fish1Box = GameObject.FindGameObjectsWithTag("Fish1Box");
         for (int i = 0; i < fish3Box.Length; i++)
         {
-            // if the 3rd fish was hit
+            // If the 3rd fish was hit
             if (gameObject.tag == "Fish3")
             {
-                // destroy the bricks around it in that fish's group
+                // Destroy the bricks that are in the fish's group (surrounding the fish)
                 Destroy(fish3Box[i]);
                 gameMaster.UpdateScore(+brickValue);
             }
