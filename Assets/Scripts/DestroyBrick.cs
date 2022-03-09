@@ -48,7 +48,7 @@ public class DestroyBrick : MonoBehaviour
         {
             int randomChance = Random.Range(1, 101);
             // 40% chance
-            if (randomChance < 40)
+            if (randomChance < 30)
             {
                 Instantiate(powerup, this.transform.position, other.transform.rotation);
             }
